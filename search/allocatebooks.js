@@ -9,6 +9,9 @@ students = 2
 low = 0, high = 203, mid = 101
 {12, 34} {67} {90}
 */
+/*
+link: https://www.interviewbit.com/problems/allocate-books/
+*/
 function allocateBooks(arr, k) {
     let high = arr.reduce((acc, num) => acc + num);
     let low = 0;

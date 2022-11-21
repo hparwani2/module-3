@@ -21,6 +21,9 @@ ans = 4
 count = 2
 */
 
+/*
+link: https://practice.geeksforgeeks.org/problems/aggressive-cows/1
+*/
 function aggressiveCows(stalls, cows) {
     let low = 0;
     let high = stalls.length;

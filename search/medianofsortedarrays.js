@@ -6,7 +6,9 @@ o + o = e
 e + e = e
 merge = {1, 2, 3, 4, 5, 6, 7, 7, 8, 9}
 */
-
+/*
+link: https://www.geeksforgeeks.org/median-of-two-sorted-arrays/
+*/
 function medianOfSortedArrays(arr1, arr2, l1, h1, l2, h2) {
     
     if(h1-l1 === 0) {

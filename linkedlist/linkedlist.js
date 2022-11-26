@@ -84,6 +84,19 @@ class LinkedList {
         }
         console.log(str);
     }
+
+    pointEndToPos(n) {
+        let current = this.head;
+        while(current.next) {
+            current = current.next;
+        }
+        let end = current;
+        current = this.head;
+        while(n-- >= 1) {
+            current = current.next;
+        }
+        end.next = current;
+    }
 }
 
 module.exports = LinkedList;

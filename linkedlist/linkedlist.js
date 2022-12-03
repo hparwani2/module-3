@@ -54,9 +54,12 @@ class LinkedList {
         if(!this.head) {
             throw new Error('No Node is there');
         }
+        let data = this.head.number;
         let next = this.head.next;
         this.head.next = null;
         this.head = next;
+
+        return data;
     }
 
     // 1 --> null
@@ -97,16 +100,15 @@ class LinkedList {
         }
         end.next = current;
     }
+
+    get last() {
+        let current = this.head;
+        while(current.next !== null) {
+            current = current.next;
+        }
+
+        return current;
+    }
 }
 
 module.exports = LinkedList;
-
-
-
-
-
-function a(obj) {
-    obj = null;
-}
-
-a({a: 2});

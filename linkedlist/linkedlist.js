@@ -75,7 +75,9 @@ class LinkedList {
         while(current.next.next) {
             current = current.next;
         }
+        let data = current.next.number;
         current.next = null;
+        return data;
     }
 
     printList() {

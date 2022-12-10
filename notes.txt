@@ -340,3 +340,170 @@ output = 2
 
 100 80 60 70 60 75 85
 1   1  1  2  1  4  6
+
+
+
+
+
+
+
+
+----------------------------
+
+str = ababcbbda
+ans = c
+
+queue: 
+obj: {
+
+}
+
+
+-----------------------------
+
+implement stack using queue.
+
+
+
+
+
+
+
+
+FILO
+LIFO
+
+
+
+FIFO
+LILO
+
+-----------------------------
+
+
+
+Given a sorted LL, we need to remove duplicates
+
+list = 1 2 3 4c
+
+result = 1 2 3 4
+
+
+while(current.next !== null) {
+
+    if(current.data === current.next.data) {
+        current.next = current.next.next;
+    } else {
+        current = current.next;
+    }
+
+}
+
+
+
+
+
+
+
+--------------------------
+
+two sorted LL, merge
+
+l1 = 
+l2 = 5
+
+result = 1 --> 2 ---> 3 ---> 4 ---> 5
+
+
+
+while(l1 !== null && l2 !== null) {
+
+    if(l1.data <= l2.data) {
+        result.addNodeAtLast(l1.data);
+    } else {
+        result.addNodeAtLast(l2.data);
+    }
+}
+
+while(l1 !== null) {
+    result.addNodeAtLast(l1.data);
+}
+
+while(l2 !== null) {
+    result.addNodeAtLast(l2.data);
+}
+
+result = 1 2 3 4 5
+
+
+
+
+------------------------------------------
+
+
+
+Given a linked list and a value k, perform 
+a right rotation such that the 
+kth node reaches the end of the linked list..
+
+
+Input :
+1,2,3,4,5,6
+
+4 5 6 1 2 3 4
+k=3
+
+
+Output:
+4,5,6,1,2,3
+
+
+
+
+---------------------------------------------
+
+
+Given one linked list, you are supposed 
+to swap the element at nth position from both 
+left and right.
+
+
+Input:
+list = 1,2,3,4,5
+k = 2
+
+Output
+1,4,3,2,5
+
+
+
+----------------------------------------------
+
+You are given two linked list l1 and l2 of size m,n. 
+Your job is to merge both the linked list in a way that
+there nodes are arranged in an alternate position. 
+The first LL will contain the resultant list, while the
+second has to become empty if all its elements are used else will 
+contain the left out elements.
+
+Note:
+Perform an inplace insertion, keepint the time complexity as O(n)
+
+Input:
+l1 = 1,3,5,7, 8, 9
+l2 = 2,4,6
+
+l1 = 1l1 -> 2l2 -> 3l1 -> 4l2 -> 5l1 -> 6l2 -> 7l1
+l2 = 8, 9
+Output:
+1,2,3,4,5,6,7
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@ const Node = require('./node');
 
 class LinkedList {
     head;
-
+    size = 0;
     constructor() {}
 
     createListViaArray(arr) {
@@ -20,6 +20,7 @@ class LinkedList {
             node.next = this.head;
             this.head = node;
         }
+        this.size++;
     }
 
     // 1 2h ---> 3 ---> 4
@@ -35,6 +36,7 @@ class LinkedList {
         let next = current.next;
         current.next = node;
         node.next = next;
+        this.size++;
     }
 
     addNodeAtLast(number) {
@@ -48,6 +50,7 @@ class LinkedList {
             }
             current.next = node;
         }
+        this.size++;
     }
 
     deleteNodeAtFirst() {
@@ -58,6 +61,7 @@ class LinkedList {
         let next = this.head.next;
         this.head.next = null;
         this.head = next;
+        this.size--;
 
         return data;
     }
@@ -69,6 +73,7 @@ class LinkedList {
         }
         if(!this.head.next) {
             this.head = null;
+            this.size--;
             return;
         }
         let current = this.head;
@@ -77,6 +82,7 @@ class LinkedList {
         }
         let data = current.next.number;
         current.next = null;
+        this.size--;
         return data;
     }
 
@@ -110,6 +116,10 @@ class LinkedList {
         }
 
         return current;
+    }
+
+    get length() {
+        return this.size;
     }
 }
 

@@ -20,6 +20,10 @@ class Queue {
     get rear() {
         return this.list.last.number;
     }
+
+    get length() {
+        return this.list.length;
+    }
 }
 
 module.exports = Queue;

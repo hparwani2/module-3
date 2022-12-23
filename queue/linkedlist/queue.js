@@ -5,12 +5,22 @@ class Queue {
         this.list = new LinkedList();
     }
 
+    createViaArray(arr) {
+        for(let data of arr) {
+            this.enqueue(data);
+        }
+    }
+
     enqueue(data) {
         this.list.addNodeAtLast(data);
     }
 
     dequeue() {
         return this.list.deleteNodeAtFirst();
+    }
+
+    print() {
+        this.list.printList();
     }
 
     get front() {

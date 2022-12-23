@@ -1,9 +1,8 @@
-let a = 2;
-
-function test() {
-    let a = 3;
-    console.log(a);
-}
+"use strict";
 
 test();
-console.log(a);
+
+function test() {
+    c = 20;
+    console.log('inside test');
+}

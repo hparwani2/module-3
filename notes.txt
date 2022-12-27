@@ -783,4 +783,51 @@ input = 890, 325, 290, 530, 965
 
 
 
+-------------------------------------------------
+
+
+
+pre-order = 3,9,20,15,7
+in-order = 9,3,15,20,7
+
+            
+
+
+
+
+
 965
+--------------------------------------
+
+Given an input string, 
+find out the maximum occurring character 
+in the string and print it.
+
+Example 1:
+Input: string = “abbfed”
+Output: b
+
+Example 2:
+Input: string = “wefeqweeq”
+Output: e
+
+
+------------------------------------------
+
+
+Given an array of strings, 
+group the anagrams together and return them.
+
+What is an anagram?
+Two strings are known as an anagram of 
+each other if they contain the same
+characters. One string is just a different 
+rearrangement of the other.
+
+
+Example 1:
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Example 3:
+Input: strs = ["a"]
+Output: [["a"]]

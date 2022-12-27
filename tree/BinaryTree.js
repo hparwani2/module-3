@@ -50,6 +50,41 @@ class BinaryTree {
         this.appendRight(root.left, parent, right);
         this.appendRight(root.right, parent, right);
     }
+    preIndex = 0;
+    constructPreorderInOrder(preOrder, inOrder) {
+        this.root = this.constructUtil(preOrder, inOrder, 0, inOrder.length - 1);
+    } 
+
+    constructUtil(preOrder, inOrder, inStart, inEnd) {
+
+        function searchInInOrder(inOrder, inStart, inEnd, data) {
+            for(let i=inStart; i<=inEnd;i++) {
+                if(inOrder[i] === data) {
+                    return i;
+                }
+            }
+
+            return new Error(`element is not found in InOrder ${data}`);
+        }
+
+        if(inStart > inEnd) {
+            return null;
+        }
+
+        let treeNode = new TreeNode(preOrder[this.preIndex]);
+        this.preIndex++;
+
+        if(inStart === inEnd) {
+            return treeNode;
+        }
+
+        let index = searchInInOrder(inOrder, inStart, inEnd, treeNode.data);
+
+        treeNode.left = this.constructUtil(preOrder, inOrder, inStart, index-1);
+        treeNode.right = this.constructUtil(preOrder, inOrder, index+1, inEnd);
+
+        return treeNode;
+    }
 
     preOrder(root) {
 

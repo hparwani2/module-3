@@ -1,10 +1,11 @@
 /*
 
-1, -1, 0
+0, 2
 
-1, 1
+9, 4, -13, 13
+9, 13, 0, 13
 
-
+k = 13
 
 
 */
@@ -19,11 +20,11 @@ function subArrayWithKSum(arr, k) {
     // }
 
     let map = new Map();
-    
-    map.put(0, 1);
 
-    for(let i=0;i<prefix.length;i++) {
-        currsum+=arr[i];
+    map.set(0, 1);
+
+    for(let i=0;i<nums.length;i++) {
+        currsum+=nums[i];
         if(map.has(currsum - k)) {
             res+=map.get(currsum - k);
         }
@@ -33,4 +34,5 @@ function subArrayWithKSum(arr, k) {
             map.set(currsum, 1);
         }
     }
+    return res;
 }

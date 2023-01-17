@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hparwani2/module-3/issues"
   },
-  "homepage": "https://github.com/hparwani2/module-3#readme"
+  "homepage": "https://github.com/hparwani2/module-3#readme",
+  "dependencies": {
+    "heap": "^0.2.7"
+  }
 }

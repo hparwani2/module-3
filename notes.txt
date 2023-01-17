@@ -831,3 +831,415 @@ Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 Example 3:
 Input: strs = ["a"]
 Output: [["a"]]
+
+
+-------------------------------------------------------
+
+
+Given an unsorted array of integers, 
+find out the length of the consecutive 
+subsequence of the
+array.
+
+Example 1:
+Input: nums = [10,4,20,1,3,2]
+Output: [1, 2, 3, 4]
+
+[1,1,1,1,,,,,,1,,,,,,,,,,1,,]
+
+1, 2, 3, 4
+
+Example 2:
+Input: nums = [0,3,7,2,5,8,4,6,0,1]
+Output: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+
+-----------------------------------------------
+
+
+str = a  b   c   d   b   a   f   e   g
+
+start = 1
+end = 8
+max = end - start = 7
+
+
+a, 5
+b, 4
+c, 2
+d, 3
+f, 6
+e, 7
+g, 8
+---------------------------------
+
+
+a      b      c     a     b    c     d    b     b
+
+4
+
+
+------------------------------------------------
+
+
+Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
+
+Note:
+
+Elements in a quadruplet (a,b,c,d) must be in non-descending order. (ie, a ≤ b ≤ c ≤ d)
+The solution set must not contain duplicate quadruplets.
+Example : 
+
+Given array S = {1 0 -1 0 -2 2}, and target = 0
+
+A solution set is:
+
+    (-2, -1, 1, 2)
+    (-2,  0, 0, 2)
+    (-1,  0, 0, 1)
+Also make sure that the solution set is lexicographically sorted.
+
+Solution[i] < Solution[j] iff Solution[i][0] < Solution[j][0] OR (Solution[i][0] == Solution[j][0] AND ... Solution[i][k] < Solution[j][k])
+
+
+------------------------------
+
+[1, 2, 2, 2, 3, 3, 3, 3, 4];
+
+[3,3,3,3,2,2,2,1,4]
+
+[   
+    [3, 4],
+    [2, 3],
+    [1, 1],
+    [4, 1]
+]
+
+
+
+arr.sort((a, b) => {
+    return a[1] > b[1];
+})
+
+
+----------------------------------
+
+Rearrange characters in a String 
+such that no two adjacent characters are same
+
+input: aa
+
+
+----------------------------------
+
+pile1 = H H H T H
+pile2 = H H H T H
+
+
+-----------------------------------
+
+
+A stack permutation is a permutation of objects in the given input queue 
+which is done by transferring elements from the input queue to the output 
+queue with the help of a stack and the built-in push and pop functions.
+
+The rules are: 
+
+1. Only dequeue from the input queue.
+2. Use inbuilt push, and pop functions in the single stack.
+3. Stack and input queue must be empty at the end.
+4. Only enqueue to the output queue.
+There are a huge number of permutations possible using a stack for a single input queue. 
+Given two arrays, both of unique elements. 
+One represents the input queue and the other represents the output queue. 
+Our task is to check if the given output is possible through stack permutation.
+
+----------------------------------------
+
+EMDRAS
+
+
+
+infix
+
+operator in between
+((( a + b ) - c * ( d / e )) + f)
+
+prefix
+operator would be first
++-+ab*c/def
+
+Postfix
+operator would be last
+
+ab+cde/*-f+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------
+
+precedence
+
+^
+3
+
+/,*
+2
+
++,-
+1
+
+
+infix
+
+((( a + b ) - c * ( d / e )) + f)
+
+
+result = ab+cde/*-f+
+
+stack
+
+
+--------------------------------------
+
+
+Input: sum = 10, coins[] = {2, 5, 3, 6}
+
+{2,2,2,2,2}
+{5,5}
+{2,2,3,3}
+{2,2,6}
+{2,3,5}
+
+5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------
+
+Problem 2: Find the unique number
+Find element that occurs once in the 
+array where rest of the element appear twice
+
+arr = [2, 1, 2, 5, 6, 1, 6, 6, 2, 1]
+output = 5
+
+-- xor operator
+
+a^a = 0
+0^b = b
+
+same bit will result 0, and 
+different bits will result 1
+
+O(n*32)
+
+000000000000000000000...32
+
+array of size 32
+
+010 - 2
+001 - 1
+010 - 2
+101 - 5
+110 - 6
+001 - 1
+001 - 1
+010 - 2
+110 - 6
+110 - 6
+---
+101
+---
+
+0 - 4
+000 000
+
+1 - 6
+111 1
+
+
+
+101
+000
+---
+101
+---
+
+
+----------------------------------------
+
+Problem Statement – Given an array of n numbers and a number k. 
+Your task is to select k numbers from an array such
+that the absolute difference between selected k numbers and remaining 
+numbers is maximum.
+
+Print the maximum absolute difference as output.
+Input: [18, 4, 15, 10], k=2;
+output - 19
+
+18,4 - 22            25   =  3
+18,15 - 33           14   = 19
+18,10 - 28           19   = 9
+4,10 - 14            33   = 19
+4,15 - 19            28   = 9
+15,10 - 25           22   = 3
+
+
+
+Output - 
+
+
+--------
+
+
+Input: [18, 4, 15, 12, 10], k=2;
+4, 10, 12, 15, 18, k=2
+
+
+
+
+
+
+
+45-14  = 31
+
+
+
+--------------------------------------------
+
+Problem Statement – Given an array of n numbers . 
+Each element in the array is at most k distance from its actual
+position. Your task is to sort this kind of array with minimum time,
+where n = number of elements and k = distance from its
+actual position
+
+Input: arr[] = {6, 5, 3, 2, 8, 10, 9}, K = 3
+
+Insertion sort - O(n*k)
+Heap -   
+               
+        5
+    8       6
+10
+
+
+O((n-k)*log2k)
+2, 3, 5
+
+
+quickSort - homework
+
+
+--------------------------------------------------------
+
+Problem Statement – Given a sorted array of n numbers. 
+Your task is to apply an equation on each element and after
+applying, you need to sort it again.
+
+Equation is A*x*x + B*x + C
+Input: [ 1, 2, 3, 5, 6, 7 ], A = -1, B = -2, C = 3
+[0, -5, -12, -32, -45, -60]
+
+
+Output -> [ -60, -45, -32, -12, -5, 0]
+
+
+
+---------------------------
+
+Input : arr[] = {-1, 0, 1, 2, 3, 4} , A = -1, B = 2, C = -1
+{-4, -1, 0, -1, -4, -9}
+
+-------------------------------------------
+
+Problem Statement - Given an array. 
+Your task is to sort it using Stack.
+
+For example –
+Input – [2, 4, 1, 12, 14, 25, 35]
+
+1
+2
+4
+12
+14
+25      
+35      
+
+
+-------------------------------------------------------
+
+Policeman decided to punish the Prisoner and asked him to 
+make a statement. 
+
+The Prisoner should make such a statement so that he would be alive.
+If the statement is held true by Policeman, the Prisoner 
+will be hanged to death and if the statement is held false, 
+the Prisoner will be shot dead.
+
+
+true ---- hanged
+false ---- shot
+
+ans "I willn't be hanged."
+ans "I will be shot dead."
+
+-----------------------------------------
+
+str1 = ABCDGH
+str2 = AEDFHR
+
+ADH - 3
+
+str1 = AGGTAB
+str2 = GXTXAYB
+
+AB - 2
+TAB - 3
+GTAB - 4
+
+i = 0
+j = 0
+
+if(str[i] === str[j])
+    return rec(i+1, j+1);
+
+return Max(rec(i, j+1), rec(i+1, j));
+
+
+
+ 

@@ -1,6 +1,17 @@
-const BinaryTree = require('./BinaryTree');
+// const BinaryTree = require('./BinaryTree');
+const AVLTree = require('./AVLtree');
 
-let binaryTree = new BinaryTree();
+// let binaryTree = new BinaryTree();
+let avlTree = new AVLTree();
+
+avlTree.root = avlTree.insert(10);
+avlTree.root = avlTree.insert(9);
+avlTree.root = avlTree.insert(8);
+avlTree.root = avlTree.insert(7);
+avlTree.root = avlTree.insert(6);
+avlTree.root = avlTree.insert(5);
+
+avlTree.preOrder(avlTree.root);
 
 // binaryTree.createViaArray([1,2,3,4,5,6,7]);
 
@@ -24,5 +35,5 @@ let binaryTree = new BinaryTree();
 
 */
 
-binaryTree.constructPreorderInOrder([3,9,20,15,7], [9,3,15,20,7]);
-binaryTree.preOrder(binaryTree.root);
+// binaryTree.constructPreorderInOrder([3,9,20,15,7], [9,3,15,20,7]);
+// binaryTree.preOrder(binaryTree.root);

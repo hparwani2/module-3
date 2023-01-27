@@ -1242,4 +1242,21 @@ return Max(rec(i, j+1), rec(i+1, j));
 
 
 
- 
+ ------------------------------
+
+ maximumSumSubarray
+ arr = {-2, -3, 4, -1, -2, 1, 5, -3}
+ max_till_now = 7
+ current_sum = 4
+
+
+{-9, -2, -1, -10}
+ if all negative - -1 
+ if all positive - sumOfArray
+if all zeros - 0
+
+-----------------------------
+
+words = [dog, cat, ant, above, don, car]
+
+queries
